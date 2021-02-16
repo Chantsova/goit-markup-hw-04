@@ -1,0 +1,164 @@
+.hero {
+    max-width: 1600px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: var(--dark-grey);
+}
+
+.hero-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 696px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+.title-hero {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: var(--white);
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.364;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.order-button {
+    display: block;
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px 32px;
+    background: var(--light-blue);
+    color: var(--white);
+    border-radius: 4px;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.875;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+}
+
+.advantages-container {
+    padding-top: 94px;
+}
+
+.ul-advantages {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.li-advantages:not(:first-child) {
+    margin-left: 30px;
+}
+
+/*Решение для отображения контейнеров с текстом размером как на макете*/
+.li-advantages {
+    max-width: 270px;
+}
+
+.advantages-title {
+    margin-top: 0;
+    margin-bottom: 0px;
+    color: var(--graphyt);
+    font-size: 14px;
+    line-height: 1.172;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.advantages-text {
+    margin-top: 10px;
+    margin-bottom: 0;
+    color: var(--light-grey);
+    font-size: 14px;
+    line-height: 1.714;
+    letter-spacing: 0.03em;
+    text-align: left;
+}
+
+.features-container {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+h2 {
+    display: block;
+    margin: 0 auto;
+    color: var(--graphyt);
+    font-size: 36px;
+    line-height: 1.172;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+.ul-features {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.ul-features li:not(:first-child) {
+    margin-left: 30px;
+}
+
+.our-staff {
+    background-color: var(--grey);
+}
+
+.staff-container {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.ul-staff {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.ul-staff li:not(:first-child) {
+    margin-left: 30px;
+}
+
+.staff-card {
+    background-color: var(--white);
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    padding-bottom: 30px;
+}
+
+.name-staff {
+    margin: 30px auto 0;
+    color: var(--graphyt);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.172;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+.position-staff {
+    margin: 10px auto 0;
+    color: var(--light-grey);
+    font-size: 16px;
+    line-height: 1.172;
+    text-align: center;
+    letter-spacing: 0.03em;
+}

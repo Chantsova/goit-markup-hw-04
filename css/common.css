@@ -55,6 +55,7 @@
     --color-pf-card-text: rgba(117, 117, 117, 1);
 
     --color-social-icons: rgba(175,177,184,1);
+    --color-social-icons-hover:  rgba(255,255,255,1);
     
     
     --card-set-gap: 30px;
@@ -271,5 +272,5 @@ a {
 }
 
 .social-media-item {
-
+    
 }

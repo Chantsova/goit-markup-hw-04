@@ -199,13 +199,35 @@ h2 {
 }
 
 .social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 44px;
     height: 44px;
-    
+    fill: var(--color-social-icons);
 }
 
-.ul-clients li:not(:first-child) {
+.social-icon:hover,
+.social-icon:focus {
+    fill: var(--color-social-icons-hover);
+}
+
+.social-link:hover,
+.social-link:focus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    border-radius: 50%;
+}
+
+.ul-social-media-staff li:not(:first-child) {
     margin-left: 10px;
+}
+
+.button {
+    padding: 0;
+    border: none;
 }
 
 

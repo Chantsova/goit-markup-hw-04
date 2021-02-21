@@ -16,8 +16,8 @@
 }
 
 .button-portfolio {
-    color: var(--graphyt);
-    background: var(--grey);
+    color: var(--color-pf-btn);
+    background: var(--color-pf-btn-bg);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.625;
@@ -30,8 +30,9 @@
 
 .button-portfolio:hover,
 .button-portfolio:focus {
-    color: var(--white);
-    background: var(--light-blue);
+    color: var(--color-pf-nav-hover);
+    background: var(--color-pf-btn-hover);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .buttons-projects {
@@ -39,7 +40,7 @@
 }
 
 .projects {
-    border: 1px solid var(--border-grey);
+    border: 1px solid var(--color-pf-card-border);
     padding: 0;
     margin: 0;
 }
@@ -51,7 +52,7 @@
 .projects-title {
     margin: 0;
     padding: 0;
-    color: var(--graphyt);
+    color: var(--color-pf-card-title);
     font-weight: bold;
     font-size: 18px;
     line-height: 2;
@@ -62,7 +63,7 @@
     margin-top: 4px;
     margin-bottom: 0;
     padding: 0;
-    color: var(--light-grey);
+    color: var(--color-pf-card-text);
     font-size: 16px;
     line-height: 1.875;
     letter-spacing: 0.03em;
@@ -86,4 +87,9 @@
 
 .text-card {
     padding: 20px 24px;
+}
+
+.card-thumb:hover,
+.card-thumb:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }

@@ -1,23 +1,67 @@
-:root {
+/* :root {
     --light-blue: rgba(33, 150, 243, 1);
-
     --black: rgba(0, 0, 0, 1);
     --graphyt: rgba(33, 33, 33, 1);
-
     --light-grey: rgba(117, 117, 117, 1);
     --grey: rgba(245, 244, 250, 1);
     --border-grey: rgba(238, 238, 238, 1);
     --header-grey: rgba(236, 236, 236, 1);
     --dark-grey: rgba(47, 48, 58, 1);
-
     --white: rgba(255, 255, 255, 1);
     --white-op06: rgba(255, 255, 255, 0.6);
+    --card-set-gap: 30px;
+} */
 
+:root {
+    --color-body: rgba(255, 255, 255, 1);
+
+    --color-logo-black: rgba(0, 0, 0, 1);
+    --color-logo-blue: rgba(33, 150, 243, 1);
+    --color-logo-white: rgba(255, 255, 255, 1);
+
+    --color-text-menu: rgba(236, 236, 236, 1);
+    --color-hover: rgba(33, 150, 243, 1);
+    --color-header-border: rgba(238, 238, 238, 1);
+    --color-header-contacts: rgba(117, 117, 117, 1);
+    --color-header-border: rgba(236, 236, 236, 1);
+
+    --color-hero-bg: rgba(47, 48, 58, 1);
+    --color-hero-text: rgba(255, 255, 255, 1);
+    --color-hero-btn-bg: rgba(33, 150, 243, 1);
+
+    --color-advantages-title: rgba(33, 33, 33, 1);
+    --color-advantages-text: rgba(117, 117, 117, 1);
+    
+    --color-features-title: rgba(33, 33, 33, 1);
+    --color-staff-bg: rgba(245, 244, 250, 1);
+    --color-staff-title: rgba(33, 33, 33, 1);
+    --color-staff-name: rgba(33, 33, 33, 1);
+    --color-staff-card-bg: rgba(255, 255, 255, 1);
+    --color-position-text: rgba(117, 117, 117, 1);
+
+    --color-clients: rgba(175,177,184,1);
+
+    --color-footer-bg: rgba(47, 48, 58, 1);
+    --color-office: rgba(255, 255, 255, 1);
+    --color-contacts-footer: rgba(255, 255, 255, 0.6);
+    --color-social-media-title: rgba(255,255,255,1);
+        
+    --color-pf-btn: rgba(33, 33, 33, 1);
+    --color-pf-btn-bg: rgba(245, 244, 250, 1);
+    --color-pf-btn-hover: rgba(33, 150, 243, 1);
+    --color-pf-nav-hover: rgba(255, 255, 255, 1);
+    --color-pf-card-border: rgba(238, 238, 238, 1);
+    --color-pf-card-title: rgba(33, 33, 33, 1);
+    --color-pf-card-text: rgba(117, 117, 117, 1);
+
+    --color-social-icons: rgba(175,177,184,1);
+    
+    
     --card-set-gap: 30px;
 }
 
 body {
-    background-color: var(--white);
+    background-color: var(--color-body);
     font-family: 'Roboto', sans-serif;
 }
 
@@ -37,7 +81,7 @@ img {
 .header {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid var(--header-grey);
+    border-bottom: 1px solid var(--color-text-menu);
 }
 
 .nav-menu {
@@ -51,8 +95,8 @@ img {
     padding-bottom: 25px;
     margin-top: 0;
     margin-bottom: 0;
-    color: var(--black);
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: var(--color-logo-black);
+    /* text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
     font-family: 'Raleway', sans-serif;
     font-size: 26px;
     line-height: 1.174;
@@ -63,7 +107,7 @@ img {
     display: inline-block;
     margin-top: 0;
     margin-bottom: 0;
-    color: var(--black);
+    /* color: var(--black); */
     font-family: 'Raleway', sans-serif;
     font-size: 26px;
     line-height: 1.174;
@@ -71,11 +115,11 @@ img {
 }
 
 .logo-web {
-    color: var(--light-blue);
+    color: var(--color-logo-blue);
 }
 
 .logo-second-part {
-    color: var(--white);
+    color: var(--color-logo-white);
 }
 
 .site-nav {
@@ -87,7 +131,7 @@ img {
 }
 
 .site-nav .navigation.current {
-    color: var(--light-blue);
+    color: var(--color-hover);
 }
 
 .site-nav li:not(:first-child) {
@@ -107,7 +151,7 @@ img {
 
 .navigation:hover,
 .navigation:focus {
-    color: var(--light-blue);
+    color: var(--color-hover);
 }
 
 .ul-contacts {
@@ -120,17 +164,12 @@ img {
     padding-top: 32px;
     padding-bottom: 32px;
 }
-
 .ul-contacts li:not(:first-child) {
-    margin-left: 50px; /*between menu-items*/
-}
-
-.ul-footer {
-    padding: 0;
+    margin-left: 50px; /*between contacts-items*/
 }
 
 .contacts {
-    color: var(--light-grey);
+    color: var(--color-header-contacts);
     font-weight: 500;
     font-size: 14px;
     line-height: 1.172;
@@ -139,11 +178,11 @@ img {
 
 .contacts:hover,
 .contacts:focus {
-    color: var(--light-blue);
+    color: var(--color-hover);
 }
 
-.ul-contacts li:not(:first-child) {
-    margin-left: 50px; /*between contacts-items*/
+.ul-footer {
+    padding: 0;
 }
 
 .hidden-title {
@@ -165,13 +204,13 @@ img {
 }
 
 .office-address {
-    color: var(--white);
+    color: var(--color-office);
     margin: 0;
     padding: 0;
 }
 
 .email-tel {
-    color: var(--white-op06);
+    color: var(--color-contacts-footer);
 }
 
 address {
@@ -183,10 +222,11 @@ address {
 }
 
 footer {
-    background-color: var(--dark-grey);
+    background-color: var(--color-footer-bg);
 }
 
 .footer {
+    display: flex;
     padding-top: 60px;
     padding-bottom: 60px;
 }
@@ -206,4 +246,30 @@ li {
 
 a {
     text-decoration: none;
+}
+
+.address {
+
+}
+
+.add-us {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--color-social-media-title);
+    margin-bottom: 20px;
+}
+
+.social-media-contacts {
+    margin-left: 70px;
+}
+
+.ul-social-media {
+    display: flex;
+}
+
+.social-media-item {
+
 }

@@ -1,9 +1,29 @@
+.section-title {
+    margin: 0 auto;
+    color: var(--color-section-title);
+    font-size: 36px;
+    line-height: 1.172;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+/* 1.HERO section effects */
+
 .hero {
     max-width: 1600px;
+    height: 600px;
     margin-right: auto;
     margin-left: auto;
     background-color: var(--color-hero-bg);
-    background-image: ;
+    background-image: linear-gradient(
+            to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)
+        ),
+        url('/images/hero-background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .hero-container {
@@ -45,25 +65,26 @@
     letter-spacing: 0.06em;
 }
 
+/*2.ADVANTAGES section effects */
+
 .advantages-container {
     padding-top: 94px;
 }
 
-.ul-advantages {
+.advantages-icon-container {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    margin: 0 auto;
-    padding: 0;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    height: 120px;
+    border-radius: 4px;
+    background-color: var(--color-advantages-bg-icons);
 }
 
-.li-advantages:not(:first-child) {
-    margin-left: 30px;
-}
-
-/*Решение для отображения контейнеров с текстом размером как на макете*/
-.li-advantages {
-    max-width: 270px;
+.advantages-icon {
+    display: inline-flex;
+    width: 70px;
+    height: 70px;
 }
 
 .advantages-title {
@@ -74,6 +95,7 @@
     line-height: 1.172;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    margin-top: 30px;
 }
 
 .advantages-text {
@@ -86,21 +108,30 @@
     text-align: left;
 }
 
+.ul-advantages {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/*Решение для отображения контейнеров с текстом размером как на макете*/
+.li-advantages {
+    max-width: 270px;
+}
+
+.li-advantages:not(:first-child) {
+    margin-left: 30px;
+}
+
+/* 3.FEATURES section effects */
+
 .features-container {
     padding-top: 94px;
     padding-bottom: 94px;
     margin-right: auto;
     margin-left: auto;
-}
-
-h2 {
-    display: block;
-    margin: 0 auto;
-    color: var(--color-features-title);
-    font-size: 36px;
-    line-height: 1.172;
-    text-align: center;
-    letter-spacing: 0.03em;
 }
 
 .ul-features {
@@ -116,32 +147,22 @@ h2 {
     margin-left: 30px;
 }
 
-.our-staff {
-    background-color: var(--color-staff-bg);
-}
+/* 4.STAFF section effects */
 
 .staff-container {
     padding-top: 94px;
     padding-bottom: 94px;
 }
 
-.ul-staff {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 50px;
-    margin-bottom: 0;
-    padding: 0;
-}
-
-.ul-staff li:not(:first-child) {
-    margin-left: 30px;
+.our-staff {
+    background-color: var(--color-staff-bg);
 }
 
 .staff-card {
     background-color: var(--color-staff-card-bg);
     padding-bottom: 30px;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
 
@@ -164,17 +185,78 @@ h2 {
     letter-spacing: 0.03em;
 }
 
+.ul-staff {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.ul-staff li:not(:first-child) {
+    margin-left: 30px;
+}
+
+.ul-social-media-staff {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 32px;
+    padding-left: 32px;
+    margin-top: 16px;
+}
+
+.ul-social-media-staff li:not(:first-child) {
+    margin-left: 10px;
+}
+
+.social-staff-icon {
+    fill: currentColor;
+}
+
+.social-link-staff {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    border: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: var(--color-social-icons-grey);
+}
+
+.social-link-staff:hover,
+.social-link-staff:focus {
+    background-color: var(--color-hover);
+    color: var(--color-social-icons-white);
+}
+
+/* 5.CLIENTS section effects */
+
 .clients {
     padding-top: 94px;
     padding-bottom: 94px;
 }
 
-.ul-clients {
-    display: flex;
-    margin-top: 50px; 
+.clients-link:hover,
+.clients-link:focus {
+    color: var(--color-hover);
+    border-color: var(--color-hover);
 }
 
-.clients-cards {
+.ul-clients {
+    display: flex;
+    margin: 50px 0 0;
+    padding: 0;
+}
+
+.ul-clients li:not(:first-child) {
+    margin-left: 30px;
+}
+
+.clients-link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -183,60 +265,9 @@ h2 {
     border: 1px solid var(--color-clients);
     box-sizing: border-box;
     border-radius: 4px;
+    color: var(--color-clients);
 }
 
-.ul-clients li:not(:first-child) {
-    margin-left: 30px;
+.clients-icon {
+    fill: currentColor;
 }
-
-.ul-social-media-staff {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 16px;
-    padding-left: 32px;
-    padding-right: 32px;
-}
-
-.social-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 44px;
-    height: 44px;
-    fill: var(--color-social-icons);
-}
-
-.social-icon:hover,
-.social-icon:focus {
-    fill: var(--color-social-icons-hover);
-}
-
-.social-link:hover,
-.social-link:focus {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: blue;
-    border-radius: 50%;
-}
-
-.ul-social-media-staff li:not(:first-child) {
-    margin-left: 10px;
-}
-
-.button {
-    padding: 0;
-    border: none;
-}
-
-
-/* 1. Зачастую размеры иконок моб. телефона и конверта (для контактной информации в хедере) экспортируете в меньшем размере, чем оригинал – обращайте на это внимание.
-2. Фоновое изображение секции не должно тянутся шире своего оригинального размера (1600рх) (свойство max-width вам в помощь).
-3. Стилизируйте свойство fill через css-правило (fill из path удаляйте), это вам очень поможет при выполнении д/з № 5. Отличным решением будет использовать currentColor для стилизации.
-4. Для центрирования иконок НЕ используйте паддинги – это не надежный вариант. Более оптимальным решением будет использовать флексы.
-5. Иконки соцсетей, а также постоянных клиентов группируйте как список. При этом ссылки внутри li должны занимать всю площадь li (для соцсетей размеры задавайте именно ссылке, в остальных случаях - li).
-6. Добавляя эффект тени при состоянии ховера карточки портфолио, стилизируйте именно ссылку, а не li. */
-
-https://www.youtube.com/watch?v=GmEY7lL7YXE&feature=youtu.be&ab_channel=GoITFrontend 34.48
-https://www.youtube.com/watch?v=VThG4A-4bJQ&feature=youtu.be&ab_channel=GoITFrontend 19.05

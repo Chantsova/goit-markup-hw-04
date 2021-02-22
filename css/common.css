@@ -31,21 +31,22 @@
 
     --color-advantages-title: rgba(33, 33, 33, 1);
     --color-advantages-text: rgba(117, 117, 117, 1);
-    
-    --color-features-title: rgba(33, 33, 33, 1);
+    --color-advantages-bg-icons: rgba(245, 244, 250, 1);
+
+    --color-section-title: rgba(33, 33, 33, 1);
     --color-staff-bg: rgba(245, 244, 250, 1);
     --color-staff-title: rgba(33, 33, 33, 1);
     --color-staff-name: rgba(33, 33, 33, 1);
     --color-staff-card-bg: rgba(255, 255, 255, 1);
     --color-position-text: rgba(117, 117, 117, 1);
 
-    --color-clients: rgba(175,177,184,1);
+    --color-clients: rgba(175, 177, 184, 1);
 
     --color-footer-bg: rgba(47, 48, 58, 1);
     --color-office: rgba(255, 255, 255, 1);
     --color-contacts-footer: rgba(255, 255, 255, 0.6);
-    --color-social-media-title: rgba(255,255,255,1);
-        
+    --color-social-media-title: rgba(255, 255, 255, 1);
+
     --color-pf-btn: rgba(33, 33, 33, 1);
     --color-pf-btn-bg: rgba(245, 244, 250, 1);
     --color-pf-btn-hover: rgba(33, 150, 243, 1);
@@ -54,12 +55,14 @@
     --color-pf-card-title: rgba(33, 33, 33, 1);
     --color-pf-card-text: rgba(117, 117, 117, 1);
 
-    --color-social-icons: rgba(175,177,184,1);
-    --color-social-icons-hover:  rgba(255,255,255,1);
-    
-    
+    --color-social-icons-grey: rgba(175, 177, 184, 1);
+    --color-social-icons-white: rgba(255, 255, 255, 1);
+    --color-social-icons-bg: rgba(255, 255, 255, 0.1);
+
     --card-set-gap: 30px;
 }
+
+/* COMMON selectors */
 
 body {
     background-color: var(--color-body);
@@ -72,12 +75,35 @@ img {
     height: auto;
 }
 
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
 /* container for the all sections*/
 .container {
     width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
+
+.hidden-title {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/* HEADER effects */
 
 .header {
     display: flex;
@@ -88,39 +114,6 @@ img {
 .nav-menu {
     display: flex;
     flex-direction: row;
-}
-
-.logo {
-    display: inline-block;
-    padding-top: 24px;
-    padding-bottom: 25px;
-    margin-top: 0;
-    margin-bottom: 0;
-    color: var(--color-logo-black);
-    /* text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
-    font-family: 'Raleway', sans-serif;
-    font-size: 26px;
-    line-height: 1.174;
-    letter-spacing: 0.03em;
-}
-
-.logo-footer {
-    display: inline-block;
-    margin-top: 0;
-    margin-bottom: 0;
-    /* color: var(--black); */
-    font-family: 'Raleway', sans-serif;
-    font-size: 26px;
-    line-height: 1.174;
-    letter-spacing: 0.03em;
-}
-
-.logo-web {
-    color: var(--color-logo-blue);
-}
-
-.logo-second-part {
-    color: var(--color-logo-white);
 }
 
 .site-nav {
@@ -159,14 +152,16 @@ img {
     display: flex;
     flex-direction: row;
     margin-top: 0;
-    margin-left: 331px;
+    margin-left: 305px;
     margin-bottom: 0;
     padding-left: 0;
     padding-top: 32px;
     padding-bottom: 32px;
+    color: var(--color-header-contacts);
 }
+
 .ul-contacts li:not(:first-child) {
-    margin-left: 50px; /*between contacts-items*/
+    margin-left: 30px; /*between contacts-items*/
 }
 
 .contacts {
@@ -175,6 +170,9 @@ img {
     font-size: 14px;
     line-height: 1.172;
     letter-spacing: 0.02em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .contacts:hover,
@@ -182,36 +180,57 @@ img {
     color: var(--color-hover);
 }
 
-.ul-footer {
-    padding: 0;
+.ul-contacts::before {
+    content: ' ';
+    fill: currentColor;
 }
 
-.hidden-title {
-    /* visibility: hidden;
+.icon-contacts {
+    fill: currentColor;
+    margin-right: 10px;
+}
+
+.icon-contacts:hover {
+    fill: var(--color-hover);
+}
+
+/* LOGO effects */
+.logo {
+    display: inline-block;
+    padding-top: 24px;
+    padding-bottom: 25px;
     margin-top: 0;
-    margin-bottom: 0; */
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-
-    white-space: nowrap;
-
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+    margin-bottom: 0;
+    color: var(--color-logo-black);
+    /* text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    line-height: 1.174;
+    letter-spacing: 0.03em;
 }
 
-.office-address {
-    color: var(--color-office);
-    margin: 0;
-    padding: 0;
+.logo-footer {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+    /* color: var(--black); */
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    line-height: 1.174;
+    letter-spacing: 0.03em;
 }
 
-.email-tel {
-    color: var(--color-contacts-footer);
+.logo-web {
+    color: var(--color-logo-blue);
+}
+
+.logo-second-part {
+    color: var(--color-logo-white);
+}
+
+/* FOOTER effects */
+footer {
+    background-color: var(--color-footer-bg);
 }
 
 address {
@@ -220,10 +239,6 @@ address {
     font-size: 14px;
     line-height: 1.714;
     letter-spacing: 0.03em;
-}
-
-footer {
-    background-color: var(--color-footer-bg);
 }
 
 .footer {
@@ -236,21 +251,27 @@ footer {
     margin-top: 20px;
 }
 
+.office-address {
+    color: var(--color-office);
+    margin: 0;
+    padding: 0;
+}
+
+.ul-footer {
+    padding: 0;
+}
+
 .ul-footer > li {
     margin-top: 9px;
 }
 
-/*Отключено для наглядности*/
-li {
-    list-style-type: none;
+.email-tel {
+    color: var(--color-contacts-footer);
 }
 
-a {
-    text-decoration: none;
-}
-
-.address {
-
+/* SOCIAL MEDIA footer */
+.social-media-contacts {
+    margin-left: 70px;
 }
 
 .add-us {
@@ -263,14 +284,39 @@ a {
     margin-bottom: 20px;
 }
 
-.social-media-contacts {
-    margin-left: 70px;
-}
-
 .ul-social-media {
     display: flex;
+    padding: 0;
+    margin: 0;
 }
 
-.social-media-item {
-    
+.ul-social-media > li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ul-social-media li:not(:first-child) {
+    margin-left: 10px;
+}
+
+.social-media-icon {
+    fill: var(--color-social-icons-white);
+}
+
+.social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    border: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--color-social-icons-bg);
+}
+
+.social-link:hover,
+.social-link:focus {
+    background-color: var(--color-hover);
 }

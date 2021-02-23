@@ -190,7 +190,8 @@ a {
     margin-right: 10px;
 }
 
-.icon-contacts:hover {
+.icon-contacts:hover,
+.icon-contacts:focus {
     fill: var(--color-hover);
 }
 
